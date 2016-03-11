@@ -1,0 +1,7 @@
+##
+# Do not put OS-X auto generated shit in git
+##
+.DS_Store
+
+# Ignore svn repositories in git
+.svn
