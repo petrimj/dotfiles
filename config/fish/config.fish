@@ -2,12 +2,20 @@
 # onnimonni preferred aliases and functions
 ##
 
-# Nice hack to help use aliases even with sudo
-# http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
-alias sudo "sudo "
-
 alias ll "ls -lah"
 
+##
+# Fix 'sudo !!' and 'sudo ll' because I use them so much :(
+##
+function sudo
+    if test "$argv" = !!
+        eval command sudo $history[1]
+    else if test "$argv" = 'll'
+        eval command sudo ls -lah
+    else
+        command sudo $argv
+    end
+end
 
 # Sometimes I forgot I'm using fish instead of bash and these help use '$'' and '!!'
 function bind_bang
