@@ -23,6 +23,13 @@ function file_exists
 end
 
 ##
+# Check if this is local or remote
+##
+function is_local_shell
+  count $SSH_CONNECTION > /dev/null
+end
+
+##
 # Remove variables
 ##
 function unset
