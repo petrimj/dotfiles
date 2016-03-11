@@ -6,3 +6,9 @@ alias grep "grep --color=always"
 function dexec
     docker exec -it (docker-compose ps -q web) $argv
 end
+
+##
+# Check headers from curl with normal GET method
+# Usage: $ headers google.fi
+##
+alias headers "curl -sD - -o /dev/null"
