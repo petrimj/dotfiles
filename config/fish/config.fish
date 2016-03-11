@@ -9,8 +9,11 @@ end
 
 alias ll "ls -lah"
 
+##
+# Use custom rmate port to avoid clashes with other users
+##
 if f_exists rmate
-   alias rmate "rmate --port=52777" 
+   alias rmate "rmate --port 52777" 
 end
 
 ##
