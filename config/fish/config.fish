@@ -2,7 +2,16 @@
 # onnimonni preferred aliases and functions
 ##
 
+
+function f_exists 
+    command -v "$argv" >/dev/null 2>&1
+end
+
 alias ll "ls -lah"
+
+if f_exists rmate
+   alias rmate "rmate --port=52777" 
+end
 
 ##
 # Fix 'sudo !!' and 'sudo ll' because I use them so much :(

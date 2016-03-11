@@ -1,0 +1,9 @@
+##
+# SSH config
+# This uses remote forwarding automatically for rmate
+# Disable remoteforward for all known git servers because it will cause ugly error
+##
+Host * !github.* !bitbucket.* !gitlab.* !deus.solita.fi !*gogs.*
+  # Original rmate port is 52698
+  # Use custom port for myself so that ports don't clash with other rmate users
+  RemoteForward 52777 localhost:52698
