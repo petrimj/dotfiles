@@ -2,8 +2,6 @@
 [@onnimonni](https://github.com/onnimonni) dotfiles
 
 ## Installation
-
-You need to run this once:
 ```
-$ rcup -d ~/.dotfiles
+$ rcup -d ~/.dotfiles -x LICENSE -x README.md
 ```
