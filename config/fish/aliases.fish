@@ -25,8 +25,8 @@ end
 ##
 # Check if this is local or remote
 ##
-function is_local_shell
-  count $SSH_CONNECTION > /dev/null
+function is_remote_connection
+  test (count $SSH_CONNECTION) -gt 0
 end
 
 ##

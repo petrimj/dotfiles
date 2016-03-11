@@ -18,10 +18,10 @@ source $FISH_CONF_DIR/aliases.fish
 source $FISH_CONF_DIR/hacks.fish
 
 # Use remote hacks if connection is not local and local hacks otherwise
-if is_local_shell
-    source $FISH_CONF_DIR/local.fish
-else
+if is_remote_connection
     source $FISH_CONF_DIR/remote.fish
+else
+    source $FISH_CONF_DIR/local.fish
 end
 
 # Remove when not needed
