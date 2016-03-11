@@ -18,6 +18,7 @@ function unset
     set --erase "$argv"
 end
 
+
 # Check current conf file directory
 switch (uname)
 case Darwin # OS-X

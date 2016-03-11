@@ -8,3 +8,5 @@
 if file_exists rmate
    alias rmate "rmate --port 52777" 
 end
+
+set -U EDITOR nano
