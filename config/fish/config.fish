@@ -3,30 +3,16 @@
 ##
 
 ##
-# Check if command exists
-# @param $1 command_name
-# @return boolean
+# Get current conf file directory
+# This needs to resolve symlinks from rcm
 ##
-function file_exists
-    command -v "$argv" >/dev/null 2>&1
-end
-
-##
-# Remove variables
-##
-function unset
-    set --erase "$argv"
-end
-
-
-# Check current conf file directory
 switch (uname)
 case Darwin # OS-X
     set FISH_CONF_DIR ( dirname ( readlink    (status --current-filename) ) )
 case '*'
     set FISH_CONF_DIR ( dirname ( readlink -f (status --current-filename) ) )
 end
-echo "Modify fish configs: $FISH_CONF_DIR"
+echo "Modify shell: $FISH_CONF_DIR"
 
 source $FISH_CONF_DIR/aliases.fish
 source $FISH_CONF_DIR/hacks.fish

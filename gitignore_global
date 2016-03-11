@@ -5,3 +5,8 @@
 
 # Ignore svn repositories in git
 .svn
+
+##
+# Ignore sql dumps in git always. This is for security
+##
+*.sql
