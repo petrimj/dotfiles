@@ -11,16 +11,34 @@ function file_exists
     command -v "$argv" >/dev/null 2>&1
 end
 
-source ~/.config/fish/aliases.fish
+##
+# Remove variables
+##
+function unset
+    set --erase "$argv"
+end
 
-source ~/.config/fish/hacks.fish
+# Check current conf file directory
+switch (uname)
+case Darwin # OS-X
+    set FISH_CONF_DIR ( dirname ( readlink    (status --current-filename) ) )
+case '*'
+    set FISH_CONF_DIR ( dirname ( readlink -f (status --current-filename) ) )
+end
+echo "Modify fish configs: $FISH_CONF_DIR"
+
+source $FISH_CONF_DIR/aliases.fish
+source $FISH_CONF_DIR/hacks.fish
 
 # Use remote hacks if connection is not local and local hacks otherwise
 if eval $SSH_CONNECTION
-    source ~/.config/fish/remote.fish
+    source $FISH_CONF_DIR/remote.fish
 else
-    source ~/.config/fish/local.fish
+    source $FISH_CONF_DIR/local.fish
 end
+
+# Remove when not needed
+unset FISH_CONF_DIR
 
 # Show where I am
 function fish_title

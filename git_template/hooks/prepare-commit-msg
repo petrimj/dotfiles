@@ -28,7 +28,7 @@ function command_exists () {
 }
 
 # If aspell is installed spell check all my commits
-if command_exists aspell;
+if command_exists aspell; then
   # aspell has no idea of git hashes so remove them from spellchecking
   MESSAGE=$(cat "$1")
   HASHES=$(git rev-list --all)
