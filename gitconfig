@@ -1,0 +1,17 @@
+[user]
+  name = Onni Hakala
+  email = onni@koodimonni.fi
+[core]
+  editor = nano
+[alias]
+  ac = !git add -A && git commit -m
+[filter "media"]
+  clean = git media clean %f
+  smudge = git media smudge %f
+  required = true
+[init]
+  templatedir = ~/.git_template
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
