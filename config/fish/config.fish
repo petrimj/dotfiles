@@ -2,54 +2,40 @@
 # onnimonni preferred aliases and functions
 ##
 
-
-function f_exists 
+##
+# Check if command exists
+# @param $1 command_name
+# @return boolean
+##
+function file_exists
     command -v "$argv" >/dev/null 2>&1
 end
 
-alias ll "ls -lah"
+source ~/.config/fish/aliases.fish
 
-##
-# Use custom rmate port to avoid clashes with other users
-##
-if f_exists rmate
-   alias rmate "rmate --port 52777" 
+source ~/.config/fish/hacks.fish
+
+# Use remote hacks if connection is not local and local hacks otherwise
+if eval $SSH_CONNECTION
+    source ~/.config/fish/remote.fish
+else
+    source ~/.config/fish/local.fish
 end
 
-##
-# Fix 'sudo !!' and 'sudo ll' because I use them so much :(
-##
-function sudo
-    if test "$argv" = !!
-        eval command sudo $history[1]
-    else if test "$argv" = 'll'
-        eval command sudo ls -lah
-    else
-        command sudo $argv
-    end
+# Show where I am
+function fish_title
+    echo -n (whoami)@(hostname):(pwd)
 end
 
-# Sometimes I forgot I'm using fish instead of bash and these help use '$'' and '!!'
-function bind_bang
-    switch (commandline -t)[-1]
-        case "!"
-            commandline -t $history[1]; commandline -f repaint
-        case "*"
-            commandline -i !
-    end
+# Show current branch in shell
+function fish_prompt
+    set -l git_branch (git branch ^/dev/null | sed -n '/\* /s///p')
+    echo -n (whoami)'@'(hostname)':'
+    set_color green
+    echo -n (prompt_pwd)
+    set_color blue
+    echo -n '{'"$git_branch"'} '
+    set_color white
+    echo -n '$ '
 end
 
-function bind_dollar
-    switch (commandline -t)[-1]
-        case "!"
-            commandline -t ""
-            commandline -f history-token-search-backward
-        case "*"
-            commandline -i '$'
-    end
-end
-
-function fish_user_key_bindings
-    bind ! bind_bang
-    bind '$' bind_dollar
-end

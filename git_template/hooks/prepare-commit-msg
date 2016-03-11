@@ -21,7 +21,6 @@
 # vagrant
 # vagrantfile
 # ansible
-#
 ##
 
 function command_exists () {
