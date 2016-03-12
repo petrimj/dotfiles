@@ -2,11 +2,23 @@
 # Do not put OS-X auto generated shit in git
 ##
 .DS_Store
+Desktop.ini
+
+# Compiled Python files
+*.pyc
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
 
 # Ignore svn repositories in git
 .svn
 
 ##
-# Ignore sql dumps in git always. This is for security
+# Ignore sql dumps in git always. This is for security.
 ##
 *.sql
