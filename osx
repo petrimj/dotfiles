@@ -463,13 +463,13 @@ sudo mdutil -E / > /dev/null
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Use a modified version of the Solarized Dark theme by default in Terminal.app
+# Use a Monokai theme by default in Terminal.app
 osascript <<EOD
 tell application "Terminal"
   local allOpenedWindows
   local initialOpenedWindows
   local windowID
-  set themeName to "Solarized Dark xterm-256color"
+  set themeName to "Monokai"
   (* Store the IDs of all the open terminal windows. *)
   set initialOpenedWindows to id of every window
   (* Open the custom theme so that it gets added to the list
@@ -503,7 +503,7 @@ EOD
 #defaults write org.x.X11 wm_ffm -bool true
 
 # Install the Solarized Dark theme for iTerm
-open "${HOME}/.init/Solarized Dark.itermcolors"
+open "${HOME}/.init/Monokai.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
