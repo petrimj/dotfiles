@@ -13,7 +13,7 @@
 #
 # For example:
 #
-# personal_ws-1.1 en 0 
+# personal_ws-1.1 en 0
 # git
 # json
 # wordpress
@@ -28,7 +28,7 @@ function command_exists () {
 }
 
 # If aspell is installed spell check all my commits
-if command_exists aspell; then
+if [ -z "$SKIP_CUSTOM_CHECKS" ] && command_exists aspell; then
   # aspell has no idea of git hashes so remove them from spellchecking
   MESSAGE=$(cat "$1")
   HASHES=$(git rev-list --all)
@@ -41,7 +41,7 @@ if command_exists aspell; then
   if [ -n "$TYPOS" ]; then
     echo -e "ERROR: spell check failed on words: \n$TYPOS"
     echo "Edit ~/.aspell.en.pws to accept more words"
-    echo "SKIP THIS: git commit -nm '$(cat "$1")'"
+    echo "Skip this: $ run-it-please"
     exit 1
   fi
 fi

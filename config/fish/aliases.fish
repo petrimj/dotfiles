@@ -18,6 +18,30 @@ alias g "git"
 alias h "history"
 alias j "jobs"
 
+##
+# Skip all custom checks in my custom scripts
+##
+function run-it-please
+  begin
+    set -lx SKIP_CUSTOM_CHECKS true
+    eval command $history[1]
+  end
+end
+
+##
+# Add more words to spell checking
+##
+function edit-spelling
+  subl ~/.aspell.en.pws
+end
+
+# Add to spell checking word list
+function add-spelling
+  for arg in $argv
+      echo $arg >> ~/.aspell.en.pws
+  end
+end
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1 # GNU `ls`
   set -U colorflag "--color"
