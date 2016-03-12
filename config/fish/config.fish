@@ -12,13 +12,12 @@ case Darwin # OS-X
 case '*'
     set FISH_CONF_DIR ( dirname ( readlink -f (status --current-filename) ) )
 end
-echo "Modify shell: $FISH_CONF_DIR"
 
 source $FISH_CONF_DIR/aliases.fish
 source $FISH_CONF_DIR/hacks.fish
 
 # Use remote hacks if connection is not local and local hacks otherwise
-if is_remote_connection
+if test -d $SSH_CONNECTION
     source $FISH_CONF_DIR/remote.fish
 else
     source $FISH_CONF_DIR/local.fish
