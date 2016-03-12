@@ -17,9 +17,11 @@ end
 
 set FDIR (fish_config_dir)
 
+source $FDIR/helpers.fish
 source $FDIR/aliases.fish
 source $FDIR/hacks.fish
 source $FDIR/prompt.fish
+source $FDIR/colors.fish
 
 # Use remote hacks if connection is not local and local hacks otherwise
 if test -d $SSH_CONNECTION

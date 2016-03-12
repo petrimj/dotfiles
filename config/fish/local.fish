@@ -26,7 +26,18 @@ alias update 'sudo softwareupdate -i -a; brew update; brew upgrade --all; brew c
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill "ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 # Trim new lines and copy to clipboard
-alias c "tr -d '\n' | pbcopy"
+alias cb "tr -d '\n' | pbcopy"
+
+function cdf --description 'Change to directory opened by Finder'
+  if [ -x /usr/bin/osascript ]
+    set -l target (osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)')
+    if [ "$target" != "" ]
+      cd "$target"; pwd
+    else
+      echo 'No Finder window found' >&2
+    end
+  end
+end
 
 ##
 # Add more words to spell checking

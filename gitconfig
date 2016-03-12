@@ -2,7 +2,7 @@
   name = Onni Hakala
   email = onni@koodimonni.fi
 [core]
-  editor = nano  
+  editor = nano
 [filter "media"]
   clean = git media clean %f
   smudge = git media smudge %f
@@ -38,6 +38,9 @@
 
   # Or my preferred
   ac = !git add -A && git commit -m
+
+  # push origin master
+  pom = push origin master
 
   # Switch to a branch, creating it if necessary
   go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
