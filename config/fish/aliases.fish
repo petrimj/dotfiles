@@ -28,20 +28,6 @@ function run-it-please
   end
 end
 
-##
-# Add more words to spell checking
-##
-function edit-spelling
-  subl ~/.aspell.en.pws
-end
-
-# Add to spell checking word list
-function add-spelling
-  for arg in $argv
-      echo $arg >> ~/.aspell.en.pws
-  end
-end
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1 # GNU `ls`
   set -U colorflag "--color"
@@ -110,9 +96,6 @@ command -v md5sum > /dev/null; or alias md5sum "md5"
 
 # OS X has no `sha1sum`, so use `shasum` as a fallback
 command -v sha1sum > /dev/null; or alias sha1sum "shasum"
-
-# Trim new lines and copy to clipboard
-alias c "tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup "find . -type f -name '*.DS_Store' -ls -delete"

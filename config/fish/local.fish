@@ -25,4 +25,19 @@ alias update 'sudo softwareupdate -i -a; brew update; brew upgrade --all; brew c
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill "ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+# Trim new lines and copy to clipboard
+alias c "tr -d '\n' | pbcopy"
 
+##
+# Add more words to spell checking
+##
+function edit-spelling
+  subl ~/.aspell.en.pws
+end
+
+# Add to spell checking word list
+function add-spelling
+  for arg in $argv
+      echo $arg >> ~/.aspell.en.pws
+  end
+end
