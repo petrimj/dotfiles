@@ -18,9 +18,9 @@ source $FISH_CONF_DIR/hacks.fish
 
 # Use remote hacks if connection is not local and local hacks otherwise
 if test -d $SSH_CONNECTION
-    source $FISH_CONF_DIR/remote.fish
-else
     source $FISH_CONF_DIR/local.fish
+else
+    source $FISH_CONF_DIR/remote.fish
 end
 
 # Remove when not needed
