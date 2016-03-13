@@ -28,9 +28,13 @@ alias update 'sudo softwareupdate -i -a; brew update; brew upgrade --all; brew c
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill "ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
 # Trim new lines and copy to clipboard
 alias cb "tr -d '\n' | pbcopy"
 
+##
+# Change to current finder folder
+##
 function cdf --description 'Change to directory opened by Finder'
   if [ -x /usr/bin/osascript ]
     set -l target (osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)')
@@ -45,13 +49,33 @@ end
 ##
 # Add more words to spell checking
 ##
-function edit-spelling
-  subl ~/.aspell.en.pws
+function edit-spelling --description "Edit aspell current dictionary"
+  edit ~/.aspell.en.pws
 end
 
 # Add to spell checking word list
-function add-spelling
+function add-spelling --description 'Adds words into aspell spell check dictionary'
   for arg in $argv
-      echo $arg >> ~/.aspell.en.pws
+      echo $arg >> ~/.dotfiles/aspell.en.pws
   end
+
+  # Move temporarely
+  /bin/mv ~/.dotfiles/aspell.en.pws ~/.dotfiles/aspell.en.pws.bak
+
+  # Remove duplicates from dictionary
+  head -n 1 ~/.dotfiles/aspell.en.pws.bak >> ~/.dotfiles/aspell.en.pws
+  tail -n +2 ~/.dotfiles/aspell.en.pws.bak | sort | uniq -i >> ~/.dotfiles/aspell.en.pws
+
+  # Remove temporare file
+  rm -f ~/.dotfiles/aspell.en.pws.bak
+
+  # Immediately save them in git and push to github
+  set -lx my_path pwd
+
+  cd ~/.dotfiles
+  git commit aspell.en.pws -m "Added words: '$argv' to spell checking"
+  git push origin HEAD
+
+  # Return
+  cd $my_path
 end

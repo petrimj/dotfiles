@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<root>
+    <item>
+        <name>Map FN + WASD to arrow keys</name>
+        <identifier>FN WASD</identifier>
+        <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
+        <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
+    </item>
+    <item>
+        <name>Map FN + IJKL to arrow keys</name>
+        <identifier>FN IJKL</identifier>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
+        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
+    </item>
+    <item>
+        <name>Map FN + UO to PAGE_UP/DOWN</name>
+        <identifier>FN UO PAGE</identifier>
+        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::FN, KeyCode::PAGEUP</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::FN, KeyCode::PAGEDOWN</autogen>
+    </item>
+
+    <item>
+        <name>CMD + Space = Enter</name>
+        <identifier>OPTION+ENTER</identifier>
+        <autogen>__KeyToKey__ KeyCode::SPACE, ModifierFlag::OPTION_R, KeyCode::ENTER</autogen>
+    </item>
+</root>
