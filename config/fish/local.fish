@@ -1,3 +1,6 @@
+# Start ssh agent
+start_agent
+
 # Add aliases
 ### Added sublime editor as main editor
 set SUBL "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"

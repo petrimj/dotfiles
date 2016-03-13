@@ -26,9 +26,9 @@ source $FDIR/colors.fish
 
 # Use remote hacks if connection is not local and local hacks otherwise
 if test -d $SSH_CONNECTION
-    source $FDIR/local.fish
+  source $FDIR/local.fish
 else
-    source $FDIR/remote.fish
+  source $FDIR/remote.fish
 end
 
 # Remove temporary variable afterwise
