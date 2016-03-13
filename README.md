@@ -71,7 +71,7 @@ Sublime just has a lot faster search algorithm than atom (according to my subjec
 ## Installation
 ```
 $ git clone https://github.com/onnimonni/dotfiles ~/.dotfiles
-$ rcup -d ~/.dotfiles -x LICENSE -x README.md
+$ rcup -d ~/.dotfiles -x UNLICENSE -x README.md
 ```
 
 ### Install all settings and utilities in OS-X
