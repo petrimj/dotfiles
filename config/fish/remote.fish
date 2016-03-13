@@ -6,7 +6,8 @@
 # Use custom rmate port to avoid clashes with other users
 ##
 if command_exists rmate
-   alias rmate "rmate --port 52777"
+  alias subl "rmate --port 52777"
+  alias rmate "rmate --port 52777"
 end
 
 # Use nano as editor in remotes
