@@ -66,16 +66,11 @@ function add-spelling --description 'Adds words into aspell spell check dictiona
   head -n 1 ~/.dotfiles/aspell.en.pws.bak >> ~/.dotfiles/aspell.en.pws
   tail -n +2 ~/.dotfiles/aspell.en.pws.bak | sort | uniq -i >> ~/.dotfiles/aspell.en.pws
 
-  # Remove temporare file
-  rm -f ~/.dotfiles/aspell.en.pws.bak
+  # Remove temporary file
+  rm -f ~/.dotfiles/aspell.en.pws.bak > /dev/null
 
-  # Immediately save them in git and push to github
-  set -lx my_path pwd
-
-  cd ~/.dotfiles
-  git commit aspell.en.pws -m "Added words: '$argv' to spell checking"
-  git push origin HEAD
-
-  # Return
-  cd $my_path
+  # Immediately save them in git
+  set -lx DDIR $HOME/.dotfiles/
+  git --git-dir=$DDIR/.git --work-tree=$DDIR \
+      commit aspell.en.pws -m "Added words: '$argv' to spell checking"
 end
