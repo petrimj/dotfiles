@@ -4,7 +4,6 @@
   "default_line_ending": "unix",
   "detect_indentation": false,
   "ensure_newline_at_eof_on_save": true,
-  "show_full_path": true,
   "file_exclude_patterns":
   [
     ".DS_Store",
@@ -24,6 +23,10 @@
   "font_size": 13,
   "highlight_modified_tabs": true,
   "hot_exit": false,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
   "line_padding_bottom": 2,
   "match_brackets": true,
   "match_brackets_angle": true,
@@ -33,9 +36,11 @@
     90
   ],
   "show_encoding": true,
+  "show_full_path": true,
   "show_line_endings": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true,
-  "word_wrap": true
+  "word_wrap": true,
+  "php_bin": "/usr/local/bin/php"
 }
