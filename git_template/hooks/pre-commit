@@ -130,5 +130,3 @@ if [ ${#errors[@]} -ne 0 ]; then
     echo "Skip these checks: $ run-it-please"
     exit 1
 fi
-
-exit 1

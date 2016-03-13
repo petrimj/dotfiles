@@ -29,6 +29,7 @@ function command_exists () {
 
 # Skip checks if this variable is defined
 if [ "$SKIP_CUSTOM_CHECKS" = "true" ]; then
+  echo "==> Skipping tests..."
   exit 0
 fi
 
@@ -45,7 +46,7 @@ if command_exists aspell; then
   TYPOS=$(echo $MESSAGE | aspell list -d en_US)
   if [ -n "$TYPOS" ]; then
     echo -e "ERROR: spell check failed on words: \n$TYPOS"
-    echo "Edit ~/.aspell.en.pws to accept more words"
+    echo "Add words: $ add-spelling $(echo $TYPOS)"
     echo "Skip this: $ run-it-please"
     exit 1
   fi
