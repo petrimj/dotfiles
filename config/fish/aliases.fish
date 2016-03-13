@@ -7,6 +7,9 @@ alias cp "cp -iv"
 alias mv "mv -iv"
 alias rm "rm -iv"
 
+# ls aliases
+alias ll "ls -lah"
+
 # Shortcuts
 alias h "history"
 alias j "jobs"
