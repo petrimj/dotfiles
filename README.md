@@ -9,13 +9,13 @@ I hope someday I will learn to play [vimgolf](http://www.vimgolf.com/) but until
 Many configs and aliases are copied from [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles/) and [paulirish/dotfiles](https://github.com/paulirish/dotfiles). Thank you guys for sharing these for me!
 
 ## Includes
-- fish shell as default shell & plenty of noob friendly fish functions
+- Fish shell as default shell & plenty of noob friendly fish functions
 - Different fish configuration between local and remote shells (see [local.fish](config/fish/local.fish) & [remote.fish](config/fish/remote.fish))
 - Automatically starts ssh agent when terminal is opened
 - Automatic [rmate](https://github.com/aurora/rmate/blob/master/rmate) settings in order to use sublime text in remote servers.
 - Automatic [english spell checking](git_template/hooks/prepare-commit-message) on git commits with [customizable word list](aspell.en.pws)
 - Few [automatic syntax checks](git_template/hooks/pre-commit) on git commits (ruby,php,json)
-- custom nano keyboard mappings (I like `ctrl+c`, `ctrl+v` and `ctrl+f` a lot more than nano defaults)
+- Custom nano keyboard mappings (I like `ctrl+c`, `ctrl+v` and `ctrl+f` a lot more than nano defaults)
 - Monokai theme for terminal (but darker background for better contrast)
 
 ### Hardcore stuff which is probably useful only for me
@@ -41,7 +41,7 @@ Many configs and aliases are copied from [mathiasbynens/dotfiles](https://github
 These all will be installed using `.install.sh`.
 
 ## Recommended paid applications
-**[copyclip2](https://fiplab.com/apps/copyclip-for-mac)**
+**[copyclip2](https://fiplab.com/apps/copyclip-for-mac)** -
 Saves ridiculous amount of hours because and only costs 4.99$.
 
 ## Installation
