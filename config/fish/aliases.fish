@@ -11,6 +11,9 @@ alias rm "rm -iv"
 alias h "history"
 alias j "jobs"
 
+# If you forgot that this is not zsh
+alias where "which -a"
+
 # Navigation
 function cd..  ; cd .. ; end
 function ..    ; cd .. ; end
