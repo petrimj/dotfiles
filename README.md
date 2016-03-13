@@ -53,6 +53,10 @@ These all will be installed using `.install.sh`.
 ### Recommended free but not installed by default
 - **evernote** - For your random thoughts and notes. Has really slick search and becames better more you use it!
 
+## Recommended OS-X apps
+- **Mail.app** - Only one which works well with gpg. I miss mailbox for UI.
+- **Keychain Access.app** - For storing secrects like passwords and notes. Even works between iOS and OS-X devices.
+
 ## Recommended paid applications
 **[copyclip2](https://fiplab.com/apps/copyclip-for-mac)** -
 Saves ridiculous amount of hours and only costs **4.99$**.
@@ -87,5 +91,3 @@ $ update-dotfiles
 
 ## UNLICENSE
 Use this package as you want to. Sharing is caring!
-
-
