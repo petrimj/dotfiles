@@ -25,24 +25,43 @@ Many configs and aliases are copied from [mathiasbynens/dotfiles](https://github
 ## Requirements
 [rcm](https://github.com/thoughtbot/rcm)
 
+## Recommended shell
+Please try `fish` :)! It is much more pleasant than bash.
+
 ## Recommended utilities
 
 - **aspell** - for automatic spell checking in git commits
 - **cowsay** - it makes ansible deployments much more funnier
 - **wifi-password** - it makes ansible deployments much more funnier
+- **ansible** - For large remote deployments
+- **docker** - Docker client to run docker locally (Choose from `docker-machine` and `dlite`)
 
 ## Recommended free applications
-- **spectacle** - Really fancy open source window resizer
-- **iterm2** - Better terminal
-- **karabiner** - Custom keyboard mappings
-- **seil** - Override system keys into whatever you want to
-- **slack** - Override system keys into whatever you want to
+- **spectacle** - Really fancy open source window resizer with configurable hotkeys.
+- **iterm2** - Better terminal than default.
+- **karabiner** - Custom keyboard mappings.
+- **seil** - Override system keys into whatever you want to.
+- **slack** - Slack is simple but configurable chat for organisations.
+- **vagrant** - Really easy virtual machine configuration.
+- **virtualbox** - Virtual machine engine for vagrant.
+- **skype** - Usually people use this for video meetings. I like google hangouts but skype has more users.
+- **gpgtools** - Please start using open gpg as soon as you can. Emails are not so secure as you think. This works well with OS-X mail.app.
+- **vlc** - For playing whatever videos you want to. VLC can handle them all.
 
 These all will be installed using `.install.sh`.
 
+### Recommended free but installed by default
+- **evernote** - For your random thoughts and notes. Has really slick search and becames better more you use it!
+
 ## Recommended paid applications
 **[copyclip2](https://fiplab.com/apps/copyclip-for-mac)** -
-Saves ridiculous amount of hours because and only costs 4.99$.
+Saves ridiculous amount of hours because and only costs **4.99$**.
+
+**[sublime text 3](https://www.sublimetext.com/buy)** - My preferred text editor costs hefty **70$** but is so awesome I could not work without it.
+I think you can use **[atom by github](https://atom.io/)** too.
+Sublime has a lot faster search algorithm than atom (according to my subjective testing).
+
+**[RescueTime Premium](https://www.rescuetime.com/)** - Rescuetime saves a lot time. It automatically produces reports for you about your computer usage patterns. I'm really lousy in tracking hours so this is priceless. **$72/year**
 
 ## Installation
 ```

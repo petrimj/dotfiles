@@ -1,8 +1,5 @@
-#!/bin/env bash
+#!/bin/bash
 set -e
-
-# Ask for sudo only once
-sudo -v
 
 # Helper function
 function command_exists () {
@@ -10,7 +7,17 @@ function command_exists () {
 }
 
 # Install Xcode commandline tools
-xcode-select --install
+if ! xcode-select -p; then
+  xcode-select --install
+  echo "Install Xcode commandline tools and run this command again: $ $0"
+  exit 1
+else
+  echo "Xcode commandline tools already installed!"
+fi
+
+# Ask for sudo only once
+echo "Enter your sudo password for one time. This is for installing pip."
+sudo -v
 
 # Install brew
 if ! command_exists brew; then
@@ -20,14 +27,15 @@ fi
 # Install utilities
 brew tap thoughtbot/formulae
 brew tap caskroom/cask
-brew install rcm aspell wifi-password cowsay pip fish node docker  # Last one is must have
+brew install rcm aspell wifi-password fish node docker cowsay ansible # Last one is must have
 
 # Install pygmentize
+sudo easy_install pip
 pip install pygments --upgrade
 
 # Install useful applications for developers using cask
 brew cask install spectacle iterm2 flux seil karabiner google-chrome firefox \
-                  virtualbox slack
+                  virtualbox slack skype gpgtools vagrant vagrant-manager
 
 # Activate dotfiles for the first time
 rcup -d ~/.dotfiles -x LICENSE -x README.md
@@ -69,8 +77,16 @@ $cli relaunch
 ##
 # Install OnniDvorak-QWERTY-CMD custom keyboard layout
 ##
-cp ~/.dotfiles/init/OnniDvorak* /Library/Keyboard\ Layouts/
+sudo cp ~/.dotfiles/init/onnimonni-Dvorak-QWERTY-CMD /Library/Keyboard\ Layouts/
+sudo cp ~/.dotfiles/init/onnimonni-Dvorak-QWERTY-CMD.keylayout /Library/Keyboard\ Layouts/
 
+##
+# Start to use fish shell
+##
+chsh -s /usr/local/bin/fish
+
+echo "INSTALLATION IS COMPLETE!"
 echo "OPTIONAL FINAL STEP:"
-echo "Activate onnimonni-Dvorak keyboard layout from System Preferences -> Keyboard \
+echo "Activate onnimonni-Dvorak keyboard layout from"
+echo "GO: System Preferences -> Keyboard \
 -> Input Sources -> search 'onni' -> activate onnimonni-Dvorak"
