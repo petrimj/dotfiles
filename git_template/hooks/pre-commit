@@ -115,7 +115,9 @@ done
 # Display all errors
 ##
 if [ ${#errors[@]} -ne 0 ]; then
-    echo "==> Found ${#errors[@]} errors:"
+    echo "#######################"
+    echo "### FOUND ${#errors[@]} ERRORS: ###"
+    echo "#######################"
     for i in "${errors[@]}"
     do
         echo "==> $i"
