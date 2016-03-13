@@ -20,9 +20,6 @@ function fish_prompt
   z --add "$PWD"
 
   # Quite nice source for colors: http://colours.neilorangepeel.com/
-  # Show prompt
-  set -l git_branch (git branch ^/dev/null | sed -n '/\* /s///p')
-  set_color normal
   echo -n (whoami)
   set_color "#FFDAB9" #peachpuff
   echo -n '@'
@@ -30,8 +27,23 @@ function fish_prompt
   echo -n (hostname)':'
   set_color "#E9967A" #darksalmon
   echo -n (prompt_pwd)
-  set_color "#6495ED" #cornflowerblue
-  echo -n '{'"$git_branch"'} '
   set_color normal
   echo -n '> '
 end
+
+# Show git branch on right prompt
+function fish_right_prompt
+  if is_git
+    if is_git_dirty
+      set_color red
+    else if is_git_ahead
+      set_color yellow
+    else
+      set_color green
+    end
+    echo -n (git_branch)
+    set_color normal
+    echo -n ' '
+  end
+end
+
