@@ -15,7 +15,7 @@ set -g fish_color_param 5f87af
 set -g fish_color_quote d7af5f
 set -g fish_color_redirection normal
 set -g fish_color_search_match --background=purple
-set -g fish_color_status 5f0000
+set -g fish_color_status 66ffff
 set -g fish_color_user 5f875f
 set -g fish_color_valid_path --underline
 
