@@ -27,7 +27,7 @@ fi
 # Install utilities
 brew tap thoughtbot/formulae
 brew tap caskroom/cask
-brew install rcm aspell wifi-password fish node docker cowsay ansible # Last one is must have
+brew install rcm aspell ansible wifi-password fish node docker cowsay  # Last one is must have
 
 # Install pygmentize
 sudo easy_install pip
@@ -35,7 +35,7 @@ pip install pygments --upgrade
 
 # Install useful applications for developers using cask
 brew cask install spectacle iterm2 flux seil karabiner google-chrome firefox \
-                  virtualbox slack skype gpgtools vagrant vagrant-manager
+                  virtualbox slack skype gpgtools vagrant vagrant-manager vlc
 
 # Activate dotfiles for the first time
 rcup -d ~/.dotfiles -x LICENSE -x README.md
