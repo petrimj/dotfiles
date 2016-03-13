@@ -58,8 +58,9 @@ These all will be installed using `.install.sh`.
 Saves ridiculous amount of hours because and only costs **4.99$**.
 
 **[sublime text 3](https://www.sublimetext.com/buy)** - My preferred text editor costs hefty **70$** but is so awesome I could not work without it.
+
 I think you can use **[atom by github](https://atom.io/)** too.
-Sublime has a lot faster search algorithm than atom (according to my subjective testing).
+Sublime just has a lot faster search algorithm than atom (according to my subjective testing).
 
 **[RescueTime Premium](https://www.rescuetime.com/)** - Rescuetime saves a lot time. It automatically produces reports for you about your computer usage patterns. I'm really lousy in tracking hours so this is priceless. **$72/year**
 
