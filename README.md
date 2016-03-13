@@ -50,7 +50,7 @@ Please try `fish` :)! It is much more pleasant than bash.
 
 These all will be installed using `.install.sh`.
 
-### Recommended free but installed by default
+### Recommended free but not installed by default
 - **evernote** - For your random thoughts and notes. Has really slick search and becames better more you use it!
 
 ## Recommended paid applications
