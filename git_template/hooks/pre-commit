@@ -4,6 +4,11 @@
 # Run some tests when commiting
 ##
 
+# Skip checks if this variable is defined
+if [ "$SKIP_CUSTOM_CHECKS" = "true" ]; then
+  exit 0
+fi
+
 ##
 # This script can be called from anywhere so it's good to be in the correct location
 # This can also be called in .git/hooks dir and we need to get into project root
@@ -122,7 +127,7 @@ if [ ${#errors[@]} -ne 0 ]; then
     do
         echo "==> $i"
     done
-    echo "To skip these tests run: 'git commit -n'"
+    echo "Skip these checks: $ run-it-please"
     exit 1
 fi
 

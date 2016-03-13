@@ -17,7 +17,8 @@ end
 
 set FDIR (fish_config_dir)
 
-source $FDIR/helpers.fish
+set PATH ~/.dotfiles/bin $PATH
+
 source $FDIR/aliases.fish
 source $FDIR/hacks.fish
 source $FDIR/prompt.fish

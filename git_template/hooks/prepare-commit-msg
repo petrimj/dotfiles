@@ -27,8 +27,13 @@ function command_exists () {
   command -v "$1" >/dev/null 2>&1
 }
 
+# Skip checks if this variable is defined
+if [ "$SKIP_CUSTOM_CHECKS" = "true" ]; then
+  exit 0
+fi
+
 # If aspell is installed spell check all my commits
-if [ -z "$SKIP_CUSTOM_CHECKS" ] && command_exists aspell; then
+if command_exists aspell; then
   # aspell has no idea of git hashes so remove them from spellchecking
   MESSAGE=$(cat "$1")
   HASHES=$(git rev-list --all)
