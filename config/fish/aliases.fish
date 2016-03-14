@@ -29,6 +29,20 @@ alias print "c"
 alias filesize "fs"
 
 ##
+# Fantastic system which automaticly guesses what you wanted run
+# Thanks: https://github.com/skithund
+# Example:
+# $ ech 'hello world'
+# fish: Unknown command 'cleorr'
+# $ fuck
+# $ echo [enter/↑/↓/ctrl+c]
+# hello world
+##
+if command_exists thefuck
+  eval (thefuck --alias | tr '\n' ';')
+end
+
+##
 # Check headers from curl with normal GET method
 # Usage: $ headers google.fi
 ##
