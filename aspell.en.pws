@@ -48,6 +48,7 @@ dotfiles
 env
 envs
 esc
+etcd
 everytime
 fastcgi
 favicon
