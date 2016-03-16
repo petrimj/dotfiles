@@ -11,6 +11,8 @@ alias rmate '/usr/local/bin/subl'
 # Set default editor
 set -U EDITOR subl
 
+set PATH /usr/local/gdev-env/bin $PATH
+
 # Shortcuts
 alias d "cd ~/Documents/Dropbox"
 alias dl "cd ~/Downloads"
@@ -35,7 +37,7 @@ alias cb "tr -d '\n' | pbcopy"
 ##
 # Change to current finder folder
 ##
-function cdf --description 'Change to directory opened by Finder'
+function cdf --description 'Change to directory which is open in Finder'
   if [ -x /usr/bin/osascript ]
     set -l target (osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)')
     if [ "$target" != "" ]
@@ -43,6 +45,31 @@ function cdf --description 'Change to directory opened by Finder'
     else
       echo 'No Finder window found' >&2
     end
+  end
+end
+
+
+##
+# cd to current finder folder (inverse of cdf)
+##
+function fdc --description 'Change Finder to current directory'
+  if [ -x /usr/bin/osascript ]
+
+    set -lx first_char (echo $argv | cut -c 1)
+    if [ "$first_char" != "" ]
+      set thePath (pwd)
+    else if [ "$first_char" != "/" ]
+      set thePath (pwd)/"$argv"
+    else
+      set thePath "$argv"
+    end
+    osascript -e 'set myPath to ( POSIX file "'$thePath'" as alias )
+    try
+      tell application "Finder" to set the (folder of the front window) to myPath
+    on error -- no open folder windows
+      tell application "Finder" to open myPath
+    end try
+    tell application "Finder" to activate'
   end
 end
 
