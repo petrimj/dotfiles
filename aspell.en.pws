@@ -40,6 +40,7 @@ conf
 config
 css
 dev
+devgeniem
 dir
 dlite
 dns
@@ -59,6 +60,7 @@ fpm
 galera
 gb
 gdev
+geniem
 gh
 github
 gitignore
@@ -99,6 +101,7 @@ nanorc
 nginx
 onnimonni
 organisation
+packagist
 pagespeed
 param
 params
