@@ -115,6 +115,7 @@ plugin
 polylang
 pre
 prerequirements
+proto
 readme
 redis
 repo
