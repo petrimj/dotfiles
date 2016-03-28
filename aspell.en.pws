@@ -110,6 +110,7 @@ pdf
 phantomjs
 phinx
 php
+phpdotenv
 phpunit
 plugin
 polylang
