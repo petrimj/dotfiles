@@ -44,6 +44,7 @@ devgeniem
 dir
 dlite
 dns
+dnsmasq
 dockerfile
 dotfiles
 dustpress
@@ -66,6 +67,7 @@ gh
 github
 gitignore
 gitkeep
+glusterfs
 gogs
 grails
 guids
@@ -84,6 +86,7 @@ jekyll
 js
 json
 kebab
+letsencrypt
 lineinfile
 login
 mailhog
