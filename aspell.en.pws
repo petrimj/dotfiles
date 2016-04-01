@@ -87,6 +87,7 @@ js
 json
 kebab
 letsencrypt
+libwebp
 lineinfile
 login
 mailhog
