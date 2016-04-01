@@ -124,6 +124,7 @@ pre
 prerequirements
 proto
 readme
+recurse
 redis
 repo
 rmate
