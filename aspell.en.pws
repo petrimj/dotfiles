@@ -79,6 +79,7 @@ htpasswd
 http
 https
 init
+innodb
 io
 ip
 javascript
