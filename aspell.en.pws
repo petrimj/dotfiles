@@ -38,6 +38,7 @@ cli
 cname
 conf
 config
+cron
 crond
 css
 dev
