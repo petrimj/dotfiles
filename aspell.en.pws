@@ -41,6 +41,7 @@ config
 cron
 crond
 cronjob
+cronjobs
 css
 dev
 devgeniem
