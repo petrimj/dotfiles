@@ -105,6 +105,8 @@ mysql
 mysqlnd
 namespace
 nanorc
+nfc
+nfd
 nginx
 onnimonni
 openssh
