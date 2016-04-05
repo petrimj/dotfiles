@@ -127,6 +127,7 @@ proto
 readme
 recurse
 redis
+rei
 repo
 rmate
 rspec
