@@ -84,6 +84,7 @@ html
 htpasswd
 http
 https
+ini
 init
 innodb
 io
@@ -92,6 +93,7 @@ javascript
 jekyll
 js
 json
+kB
 kebab
 letsencrypt
 libwebp
@@ -118,6 +120,7 @@ nfd
 nginx
 oikotie
 onnimonni
+opcache
 openssh
 organisation
 packagist
@@ -178,7 +181,7 @@ wget
 wildcard
 wordpress
 wp
-xDebug
+xdebug
 xml
 yaml
 yml
