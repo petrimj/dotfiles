@@ -184,6 +184,7 @@ wget
 wildcard
 wordpress
 wp
+wpdb
 www
 xdebug
 xml
