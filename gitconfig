@@ -1,6 +1,7 @@
 [user]
   name = Onni Hakala
   email = onni@koodimonni.fi
+	signingkey = 493700FE
 [core]
   editor = nano
 [filter "media"]
