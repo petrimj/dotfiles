@@ -27,26 +27,24 @@ function command_exists () {
   command -v "$1" >/dev/null 2>&1
 }
 
-# Skip checks if this variable is defined
-if [ "$SKIP_CUSTOM_CHECKS" = "true" ]; then
-  echo "==> Skipping tests..."
-  exit 0
-fi
-
 # If aspell is installed spell check all my commits
-if command_exists aspell; then
+if [ -z "$SKIP_CUSTOM_CHECKS" ] && command_exists aspell; then
+
+  # Get commit message, Don't spellcheck gpg signatures
+  MESSAGE=$(cat $1 | grep -v "^Signed-off-by:")
+
   # aspell has no idea of git hashes so remove them from spellchecking
-  MESSAGE=$(cat "$1")
   HASHES=$(git rev-list --all)
   while read -r line; do
       MESSAGE=$(echo $MESSAGE | sed "s/$line//g")
   done <<< "$HASHES"
 
   # Spell check commit message
+  echo $MESSAGE
   TYPOS=$(echo $MESSAGE | aspell list -d en_US)
   if [ -n "$TYPOS" ]; then
     echo -e "ERROR: spell check failed on words: \n$TYPOS"
-    echo "Add words: $ add-spelling $(echo $TYPOS)"
+    echo "Edit ~/.aspell.en.pws to accept more words"
     echo "Skip this: $ run-it-please"
     exit 1
   fi

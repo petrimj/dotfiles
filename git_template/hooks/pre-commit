@@ -87,6 +87,12 @@ CHANGED_COUNT=$(git diff --name-only --cached | wc -l | tr -d '[[:space:]]')
 echo "==> Checking syntax errors in $CHANGED_COUNT committed files ..."
 for FILE in $CHANGED_FILES; do
   resource="$GIT_REPO/$FILE"
+
+  # Skip error checking if file was deleted in this commit
+  if [ ! -f $resource ]; then
+    continue
+  fi
+
   case "$resource" in
     *.php)
       if ! check_php_syntax $resource; then
