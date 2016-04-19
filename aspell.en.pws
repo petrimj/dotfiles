@@ -44,6 +44,7 @@ cron
 crond
 cronjob
 cronjobs
+crt
 css
 dev
 devgeniem
@@ -124,6 +125,7 @@ oikotie
 onnimonni
 opcache
 openssh
+openssl
 organisation
 packagist
 pagespeed
