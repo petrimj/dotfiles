@@ -42,7 +42,9 @@ function print_md5sum {
 # $1 - filename where to check
 function check_php_syntax {
   if command_available php; then
-    return $(php -l "$1" 1> /dev/null)
+    # This is equivalent to running php with error_reporting E_ALL
+    # If you want a little more permissive use 4095 (E_STRICT)
+    return $(php -d error_reporting=32767 -l "$1" 1> /dev/null)
   else
     return 0 # Just return true if we can't check php files
   fi
