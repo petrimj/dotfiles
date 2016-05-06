@@ -38,6 +38,7 @@ capybara
 ci
 cli
 cname
+codesniffer
 conf
 config
 cron
