@@ -1,7 +1,11 @@
 [user]
   name = Onni Hakala
-  email = onni@koodimonni.fi
-	signingkey = 493700FE
+  email = onni@keksi.io
+	signingkey = 9B373DD4
+[commit]
+  gpgsign = true
+[tag]
+  gpgsign = true
 [core]
   editor = nano
 [filter "media"]

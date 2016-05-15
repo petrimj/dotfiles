@@ -27,7 +27,7 @@ fi
 # Install utilities
 brew tap thoughtbot/formulae
 brew tap caskroom/cask
-brew install rcm aspell ansible wifi-password fish node docker thefuck cowsay  # Last one is must have
+brew install rcm aspell ansible wifi-password fish node docker gpg2 thefuck cowsay  # Last one is must have
 
 # Install pygmentize
 sudo easy_install pip
