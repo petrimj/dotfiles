@@ -34,6 +34,9 @@ alias chromekill "ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Trim new lines and copy to clipboard
 alias cb "tr -d '\n' | pbcopy"
 
+# Pretty print json
+alias to_json "python -m json.tool"
+
 ##
 # Change to current finder folder
 ##
