@@ -27,10 +27,23 @@ function command_exists () {
   command -v "$1" >/dev/null 2>&1
 }
 
+##
+# This script can be called from anywhere so it's good to be in the correct location
+# This can also be called in .git/hooks dir and we need to get into project root
+##
+cd "$( dirname "${BASH_SOURCE[0]}" )"/../..
+
+# No spell checking for merging or squashing
+if [ -f .git/MERGE_MSG ]; then
+   exit 0
+elif [ -f .git/SQUASH_MSG ]; then
+   exit 0
+fi
+
 # If aspell is installed spell check all my commits
 if [ -z "$SKIP_CUSTOM_CHECKS" ] && command_exists aspell; then
 
-  # Get commit message, Don't spellcheck gpg signatures
+  # Get commit message, Don't spellcheck Singed-off-by messages
   MESSAGE=$(cat $1 | grep -v "^Signed-off-by:")
 
   # aspell has no idea of git hashes so remove them from spellchecking
