@@ -91,6 +91,7 @@ html
 htpasswd
 http
 https
+iframe
 ini
 init
 innodb
