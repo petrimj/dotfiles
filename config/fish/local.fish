@@ -11,8 +11,6 @@ alias rmate '/usr/local/bin/subl'
 # Set default editor
 set -U EDITOR subl
 
-set PATH /usr/local/gdev-env/bin $PATH
-
 # Shortcuts
 alias d "cd ~/Documents/Dropbox"
 alias dl "cd ~/Downloads"
