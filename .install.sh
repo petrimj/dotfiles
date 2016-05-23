@@ -29,6 +29,10 @@ brew tap thoughtbot/formulae
 brew tap caskroom/cask
 brew install rcm aspell ansible wifi-password fish node docker gpg2 thefuck cowsay  # Last one is must have
 
+# Replace OSX utilities with newer ones
+brew tap homebrew/dupes
+brew install openssh --with-keychain-support
+
 # Install pygmentize
 sudo easy_install pip
 sudo pip install pygments --upgrade
