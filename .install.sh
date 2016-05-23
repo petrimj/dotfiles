@@ -31,7 +31,7 @@ brew install rcm aspell ansible wifi-password fish node docker gpg2 thefuck cows
 
 # Install pygmentize
 sudo easy_install pip
-pip install pygments --upgrade
+sudo pip install pygments --upgrade
 
 # Install useful applications for developers using cask
 brew cask install spectacle iterm2 flux seil karabiner google-chrome firefox \
@@ -47,8 +47,8 @@ rcup -d ~/.dotfiles -x LICENSE -x README.md
 ##
 
 # Install karabiner settings
-mkdir -p /Users/onnimonni/Library/Application\ Support/Karabiner/
-cp ~/.dotfiles/init/karabiner.xml /Users/onnimonni/Library/Application\ Support/Karabiner/private.xml
+mkdir -p $HOME/Library/Application\ Support/Karabiner/
+cp ~/.dotfiles/init/karabiner.xml $HOME/Library/Application\ Support/Karabiner/private.xml
 
 # Activate karabiner settings
 /Applications/Karabiner.app/Contents/Library/bin/karabiner reloadxml
@@ -83,6 +83,9 @@ sudo cp ~/.dotfiles/init/onnimonni-Dvorak-QWERTY-CMD.keylayout /Library/Keyboard
 ##
 # Start to use fish shell
 ##
+
+# This adds /usr/local/bin/fish to shell options
+grep -q -F "/usr/local/bin/fish" /etc/shells || echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
 echo "INSTALLATION IS COMPLETE!"
