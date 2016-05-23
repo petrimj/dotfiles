@@ -41,6 +41,7 @@ cname
 codesniffer
 conf
 config
+configs
 cron
 crond
 cronjob
@@ -136,6 +137,7 @@ opcache
 openssh
 openssl
 organisation
+osx
 packagist
 pagespeed
 param
