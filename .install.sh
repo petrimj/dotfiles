@@ -39,7 +39,7 @@ sudo pip install pygments --upgrade
 
 # Install useful applications for developers using cask
 brew cask install spectacle iterm2 flux seil karabiner google-chrome firefox \
-                  virtualbox slack skype gpgtools vagrant vagrant-manager vlc
+                  virtualbox slack skype gpgtools vagrant vagrant-manager vlc hipchat
 
 # Activate dotfiles for the first time
 rcup -d ~/.dotfiles -x LICENSE -x README.md
