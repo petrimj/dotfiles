@@ -28,6 +28,7 @@ async
 auth
 autoloader
 avahi
+aws
 backend
 barebone
 baseurl
