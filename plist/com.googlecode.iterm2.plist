@@ -1830,11 +1830,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>634 490 924 485 0 0 2560 1417 </string>
+	<string>79 310 924 485 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 22 650 476 0 0 1680 1027 </string>
+	<string>0 4 1680 1023 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>840 4 840 511 0 0 1680 1027 </string>
+	<string>819 131 650 476 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
 	<string>0 4 840 1023 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 11</key>
@@ -1856,7 +1856,7 @@
 	<key>NSWindow Frame iTerm Window 19</key>
 	<string>0 4 1680 1023 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 544 650 476 0 0 1680 1027 </string>
+	<string>0 4 840 1023 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 20</key>
 	<string>712 551 650 476 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 21</key>
@@ -1900,7 +1900,7 @@
 	<key>NSWindow Frame iTerm Window 39</key>
 	<string>0 551 650 476 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>3 548 650 476 0 0 1680 1027 </string>
+	<string>0 4 840 1023 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 40</key>
 	<string>208 551 650 476 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 41</key>
@@ -1966,7 +1966,7 @@
 	<key>NSWindow Frame iTerm Window 69</key>
 	<string>892 34 650 476 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
-	<string>0 22 650 476 0 0 1680 1027 </string>
+	<string>840 4 840 1023 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 70</key>
 	<string>913 11 650 476 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 71</key>
@@ -2759,7 +2759,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>479578258.88789803</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>485698726.36043799</real>
+	<real>485787130.47965002</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2808,7 +2808,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/onnimonni/.dotfiles/iterm2</string>
+	<string>/Users/onnimonni/.dotfiles/plist</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -2828,7 +2828,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-23T12:31:06Z</date>
+	<date>2016-05-24T13:04:30Z</date>
 	<key>SUSkippedVersion</key>
 	<string>1.0.0.20140112</string>
 	<key>SavePasteHistory</key>
