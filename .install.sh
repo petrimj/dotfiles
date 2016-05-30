@@ -58,7 +58,7 @@ brew cask install spectacle iterm2 flux seil karabiner google-chrome firefox \
                   virtualbox slack skype gpgtools vagrant vagrant-manager vlc hipchat
 
 # Activate dotfiles for the first time
-rcup -d ~/.dotfiles -x LICENSE -x README.md
+rcup -d ~/.dotfiles -x UNLICENSE -x README.md -x osx -x plist -x init
 
 ##
 # Activate karabiner settings
