@@ -15,7 +15,8 @@ end
 function start_agent
 
   # Start or re-use a gpg-agent.
-  gpgconf --launch gpg-agent
+  #gpgconf --launch gpg-agent
+  gpg-agent --daemon --write-env-file ~/.gpg-agent-info
 
   __refresh_gpg_agent_info
 
