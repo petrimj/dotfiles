@@ -15,9 +15,10 @@ function fish_config_dir
     end
 end
 
-set FDIR (fish_config_dir)
+# Use files from this folder and from homebrew /usr/local/sbin
+set PATH ~/.dotfiles/bin /usr/local/sbin $PATH
 
-set PATH ~/.dotfiles/bin $PATH
+set FDIR (fish_config_dir)
 
 source $FDIR/aliases.fish
 source $FDIR/hacks.fish
@@ -27,6 +28,8 @@ source $FDIR/colors.fish
 # Use remote hacks if connection is not local and local hacks otherwise
 if test -d $SSH_CONNECTION
   source $FDIR/local.fish
+  # Don't store secrets in git
+  source ~/.secrets.fish
 else
   source $FDIR/remote.fish
 end
