@@ -53,6 +53,9 @@ brew install openssh --with-keychain-support
 sudo easy_install pip
 sudo pip install pygments --upgrade
 
+# Install travis gem for .travis.yml syntax checking
+gem install travis --no-rdoc --no-ri
+
 # Install useful applications for developers using cask
 brew cask install spectacle iterm2 flux seil karabiner google-chrome firefox \
                   virtualbox slack skype gpgtools vagrant vagrant-manager vlc hipchat
