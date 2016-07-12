@@ -59,6 +59,7 @@ dlite
 dns
 dnsmasq
 dockerfile
+dockerignore
 dotfiles
 dustpress
 env
