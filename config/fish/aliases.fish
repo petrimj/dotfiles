@@ -17,6 +17,9 @@ alias j "jobs"
 # If you forgot that this is not zsh
 alias where "which -a"
 
+# OSX has strange conventions, use linux conventions instead
+alias sha256sum "shasum --algorithm 256"
+
 # Navigation
 function cd..  ; cd .. ; end
 function ..    ; cd .. ; end
