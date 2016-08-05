@@ -45,6 +45,10 @@ alias dl "cd ~/Downloads"
 alias dt "cd ~/Desktop"
 alias p "cd ~/Projects"
 
+# Use github commandline helper for git
+# $ brew install hub
+alias git "/usr/local/bin/hub"
+
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.
 # Finally, clear download history from quarantine. https://mths.be/bum

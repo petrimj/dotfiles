@@ -45,6 +45,9 @@ if [ -f composer.phar ];
   mv composer.phar /usr/local/bin/composer
 fi
 
+# Install hub github helper
+brew install hub
+
 # Replace OSX utilities with newer ones
 brew tap homebrew/dupes
 brew install openssh --with-keychain-support
