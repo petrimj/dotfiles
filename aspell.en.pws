@@ -64,6 +64,7 @@ dotfiles
 dustpress
 env
 envs
+envsubst
 esc
 etcd
 everytime
