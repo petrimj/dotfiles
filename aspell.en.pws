@@ -176,6 +176,7 @@ ruleset
 sanitization
 scss
 sed
+sha256sum
 shortcode
 shortcodes
 sitemap
