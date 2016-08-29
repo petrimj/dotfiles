@@ -7,7 +7,7 @@
 [tag]
   gpgsign = true
 [core]
-  editor = nano
+  editor = subl -n -w
 [filter "media"]
   clean = git media clean %f
   smudge = git media smudge %f
@@ -202,11 +202,7 @@
   insteadOf = "gist:"
 [gpg]
 	program = gpg2
-[http "https://git.demo.localflynn.com"]
-	sslCAInfo = /Users/onnimonni/.flynn/ca-certs/demo-virtualbox.pem
-[credential "https://git.demo.localflynn.com"]
-	helper = /usr/local/bin/flynn git-credentials
-[http "https://git.flynn.geniem.io"]
-	sslCAInfo = /Users/onnimonni/.flynn/ca-certs/default.pem
-[credential "https://git.flynn.geniem.io"]
-	helper = /usr/local/bin/flynn git-credentials
+
+[include]
+	# File for secrets
+    path = $HOME/.dotfiles/gitsecrets

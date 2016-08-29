@@ -1,1 +1,4 @@
 .DS_Store
+
+# File where to store non public information
+gitsecrets
