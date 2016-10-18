@@ -20,6 +20,8 @@ alias where "which -a"
 # OSX has strange conventions, use linux conventions instead
 alias sha256sum "shasum --algorithm 256"
 
+alias random_password 'env LC_CTYPE=C tr -dc "a-zA-Z0-9-_\$\?" < /dev/urandom | head -c 30'
+
 # Navigation
 function cd..  ; cd .. ; end
 function ..    ; cd .. ; end
@@ -45,11 +47,12 @@ if command_exists thefuck
   eval (thefuck --alias | tr '\n' ';')
 end
 
-##
-# Check headers from curl with normal GET method
-# Usage: $ headers google.fi
-##
-alias headers "curl -sD - -o /dev/null"
+# Pretty print json
+alias to_pretty_json "python -m json.tool"
+
+# Minify json
+alias to_json "python -c 'import sys, json; print json.dumps(json.load(sys.stdin),sort_keys=True)'"
+alias to_min_json "python -c 'import sys, json; print json.dumps(json.load(sys.stdin),sort_keys=True)'"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
