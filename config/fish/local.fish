@@ -37,7 +37,9 @@ set SUBL "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias rmate '/usr/local/bin/subl'
 
 # Set default editor
-set -U EDITOR subl
+set -U EDITOR "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
+set -U VISUAL "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
+set -U HOMEBREW_EDITOR "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
 
 # Shortcuts
 alias d "cd ~/Documents/Dropbox"
@@ -59,9 +61,6 @@ alias chromekill "ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Trim new lines and copy to clipboard
 alias cb "tr -d '\n' | pbcopy"
-
-# Pretty print json
-alias to_json "python -m json.tool"
 
 ##
 # Change to current finder folder
