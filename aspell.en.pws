@@ -122,6 +122,7 @@ libwebp
 lineinfile
 linter
 login
+lua
 mailhog
 mailpoet
 make
