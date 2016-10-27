@@ -138,6 +138,7 @@ moro
 msmtp
 msmtprc
 multiline
+multisite
 mysql
 mysqlnd
 namespace
