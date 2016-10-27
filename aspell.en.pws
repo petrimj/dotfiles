@@ -130,6 +130,7 @@ makefile
 mariadb
 mbstring
 md
+mercator
 metadata
 metafield
 mockup
