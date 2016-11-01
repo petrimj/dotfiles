@@ -38,6 +38,7 @@ alias rmate '/usr/local/bin/subl'
 
 # Set default editor
 set -U EDITOR "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
+set -U KUBE_EDITOR "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
 set -U VISUAL "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
 set -U HOMEBREW_EDITOR "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
 
