@@ -1,11 +1,10 @@
 [user]
-  name = Onni Hakala
-  email = onni@keksi.io
-	signingkey = 9B373DD4
+  name = Petri Mäki-Jaakkola
+  email = petri.maki-jaakkola@geniem.com
 [commit]
-  gpgsign = true
+  gpgsign = false
 [tag]
-  gpgsign = true
+  gpgsign = false
 [core]
   editor = subl -n -w
 [filter "media"]
@@ -125,6 +124,7 @@
   # Prevent showing files whose names contain non-ASCII symbols as unversioned.
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = false
+	excludesfile = /Users/Petri/.gitignore_global
 
 [color]
 
@@ -206,3 +206,9 @@
 [include]
 	# File for secrets
     path = $HOME/.dotfiles/gitsecrets
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

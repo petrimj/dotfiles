@@ -22,3 +22,8 @@ Thumbs.db
 # Ignore sql dumps in git always. This is for security.
 ##
 *.sql
+
+##
+# PHP Storm
+##
+.idea/
