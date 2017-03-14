@@ -2,6 +2,16 @@
 # Add aliases
 ##
 
+# alias roll="cd /usr/local/dev/rollout"
+alias vup="vagrant up"
+alias vst="vagrant status"
+alias vgst="vagrant global-status"
+alias vsh="vagrant ssh"
+alias vhl="vagrant halt"
+alias cd..="cd .."
+alias almaflush="curl --header 'POPULATE:1'"
+alias almaflush-password="curl --header 'POPULATE:1' -u 'aamulehti:aamukissa'"
+
 # Prevent overwriting or deleting by accident
 alias cp "cp -iv"
 alias mv "mv -iv"
